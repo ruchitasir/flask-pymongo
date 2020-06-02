@@ -62,8 +62,8 @@ for post in db.blogposts.find():
   pprint.pprint(post)
 print()
 
-print("Total posts:", db.blogposts.estimated_document_count())
-print("Total posts by Guido:", db.blogposts.find({"author": "Guido"}).estimated_document_count())
+print("Total posts:", db.blogposts.count())
+print("Total posts by Guido:", db.blogposts.find({"author": "Guido"}).count())
 print()
 
 # use mongo's "dollar-sign" query operators
